@@ -14,6 +14,7 @@ import pyfiglet
 from simple_term_menu import TerminalMenu
 import media
 from threading import Thread, Lock
+
 exams = []
 media_attuale = 0
 loading = False
@@ -40,15 +41,14 @@ def print_welcome():
 def menu():
 	global exams
 	print_welcome()
-	options = ["Stampa Libretto", "Calcola media ponderata", "Proietta voti", "Proietta voto di laurea", "Esci"]
+	options = ["Stampa Libretto", "Proietta voti", "Proietta voto di laurea", "Esci"]
 	materie_da_proiettare = []
 	terminal_menu = TerminalMenu(options)
 	choice = terminal_menu.show()
 	if choice == 0:
 		print_exams(exams)
+
 	if choice == 1:
-		media.media_ponderata(exams)
-	if choice == 2:
 		while True:
 			print_welcome()
 			nome = input("Nome materia (inserisci" + COLOR.ITALIC + " fine" + COLOR.RESET + " per terminare): ")
@@ -69,7 +69,7 @@ def menu():
 			materie_da_proiettare.append(media.Proiezione(nome, voto, cfu))
 		print_welcome()
 		media.proietta_media(exams, materie_da_proiettare)
-	if choice == 3:
+	if choice == 2:
 		while True:
 			try:
 				rimanenti_3_cfu = float(input("Esami da 3 cfu rimanenti: "))
@@ -101,7 +101,7 @@ def menu():
 			except Exception:
 				continue
 		media.proietta_voto_laurea(exams, rimanenti_3_cfu, rimanenti_6_cfu, rimanenti_9_cfu, rimanenti_12_cfu, obiettivo_media)
-	if choice == 4:
+	if choice == 3:
 		exit(0)
 
 def print_loading():
