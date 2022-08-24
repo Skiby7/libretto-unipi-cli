@@ -1,14 +1,12 @@
-from json import load
-from re import T
 from selenium import webdriver 
 from terminal_colors import COLORS as COLOR
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
 import os
 import time
 from login import login
 import getpass
 import signal
-from selenium.webdriver.chrome.options import Options
 from parse_libretto import parse_grades, print_exams
 import pyfiglet
 from simple_term_menu import TerminalMenu
