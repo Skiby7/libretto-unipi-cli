@@ -56,7 +56,7 @@ def proietta_voto_laurea(exams, rimanenti_3_cfu, rimanenti_6_cfu, rimanenti_9_cf
 	media_30 = 30*(rimanenti_12_cfu*12 + rimanenti_9_cfu*9 + rimanenti_6_cfu*6 + rimanenti_3_cfu*3) + sum_real
 	media_obiettivo = obiettivo_media*(rimanenti_12_cfu*12 + rimanenti_6_cfu*6 + rimanenti_3_cfu*3) + sum_real
 
-	print("La media finale se prendi tutti %d è %s%.2f%s e il voto di laurea massimo è %s%.2f%s"  % (obiettivo_media, COLOR.GREEN, float(media_obiettivo/cfu_tot), COLOR.RESET, COLOR.GREEN, int(float(media_obiettivo/cfu_tot)*(11/3))+9, COLOR.RESET))
-	print("La media finale se prendi tutti 30 è %s%.2f%s e il voto di laurea massimo è %s%.2f%s"  % (COLOR.GREEN, float(media_30/cfu_tot), COLOR.RESET, COLOR.GREEN, int(float(media_30/cfu_tot)*(11/3))+9, COLOR.RESET))
-	print("La media finale se prendi tutti 30L è %s%.2f%s e il voto di laurea massimo è %s%.2f%s" % (COLOR.GREEN, float(media_30_lode/cfu_tot), COLOR.RESET, COLOR.GREEN, int(float(media_30_lode/cfu_tot)*(11/3))+9, COLOR.RESET))
+	print("La media finale se prendi tutti %d è %s%.2f%s e il voto di laurea massimo è %s%.2f%s - %s%.2f%s"  % (obiettivo_media, COLOR.GREEN, float(media_obiettivo/cfu_tot), COLOR.RESET, COLOR.GREEN, int(float(media_obiettivo/cfu_tot)*(11/3))+4, COLOR.RESET, COLOR.GREEN, int(float(media_obiettivo/cfu_tot)*(11/3))+7, COLOR.RESET))
+	print("La media finale se prendi tutti 30 è %s%.2f%s e il voto di laurea massimo è %s%.2f%s - %s%.2f%s"  % (COLOR.GREEN, float(media_30/cfu_tot), COLOR.RESET, COLOR.GREEN, int(float(media_30/cfu_tot)*(11/3))+4, COLOR.RESET, COLOR.GREEN, int(float(media_30/cfu_tot)*(11/3))+7, COLOR.RESET))
+	print("La media finale se prendi tutti 30L è %s%.2f%s e il voto di laurea massimo è %s%.2f%s - %s%.2f%s" % (COLOR.GREEN, float(media_30_lode/cfu_tot), COLOR.RESET, COLOR.GREEN, int(float(media_30_lode/cfu_tot)*(11/3))+4, COLOR.RESET, COLOR.GREEN, int(float(media_30_lode/cfu_tot)*(11/3))+7, COLOR.RESET))
 	input(COLOR.RESET + COLOR.ITALIC + "\nPremi invio per continuare" + COLOR.RESET)
